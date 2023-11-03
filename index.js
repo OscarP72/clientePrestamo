@@ -95,9 +95,9 @@ router.post("/prestamos", async (req, res) => {
 
 router.post("/clientes", async (req, res) => {
   try {
-    const newCiente = new Cliente(req.body);
-    await newCiente.save();
-    return res.status(201).json(newCiente);
+    const newCliente = new Cliente(req.body);
+    await newCliente.save();
+    return res.status(201).json(newCliente);
   } catch (error) {
     return res.status(500).json("Fallo al crear el cliente", error);
   }
